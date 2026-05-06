@@ -1,5 +1,4 @@
 import pytest
-from playwright.sync_api import sync_playwright, expect
 from pages.login_page import LoginPage
 
 
