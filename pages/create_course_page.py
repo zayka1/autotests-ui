@@ -20,13 +20,6 @@ class CreateCoursePage(BasePage):
         self.create_course_toolbar_view = CreateCourseToolbarViewComponent(page)
         self.create_course_exercises_toolbar_view = CreateCourseExercisesToolbarViewComponent(page)
 
-    def check_visible_exercises_title(self):
-        expect(self.exercises_title).to_be_visible()
-        expect(self.exercises_title).to_have_text('Exercises')
-
-    def check_visible_create_exercise_button(self):
-        expect(self.create_exercise_button).to_be_visible()
-
     def check_visible_exercises_empty_view(self):
         self.exercises_empty_view.check_visible(
             title='There is no exercises',
