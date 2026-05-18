@@ -1,3 +1,4 @@
+import re
 from playwright.sync_api import Page, expect
 
 from pages.base_page import BasePage
@@ -13,5 +14,10 @@ class RegistrationPage(BasePage):
         self.registration_button = Button(page, 'registration-page-registration-button', 'Registration button')
 
 
+    def click_login_link(self):
+        self.login_link.click()
+        # Добавили проверку
+        self.check_current_url(re.compile(".*/#/auth/login"))
+    
     def click_registration_button(self):
         self.registration_button.click()
