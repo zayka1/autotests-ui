@@ -1,3 +1,4 @@
+import allure  # Имопртируем allure
 from playwright.sync_api import Page, Locator, expect
 
 
@@ -6,6 +7,10 @@ class BaseElement:
         self.page = page
         self.name = name
         self.locator = locator
+
+    @property
+    def type_of(self) -> str:  # Добавили свойство type_of
+        return "base element"
 
     def get_locator(self, nth: int = 0, **kwargs) -> Locator:
         locator = self.locator.format(**kwargs)
