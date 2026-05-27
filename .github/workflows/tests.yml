@@ -10,6 +10,10 @@ on:
     branches:
       - main  # Запускать workflow, когда будет сделан pull request в ветку main
 
+permissions:
+  contents: write
+  pages: write
+
 # Определяем все шаги, которые должны быть выполнены в рамках работы с тестами
 jobs:
   run-tests:
