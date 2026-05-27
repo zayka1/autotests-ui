@@ -1,5 +1,6 @@
 import allure
 from playwright.sync_api import Page, expect
+from typing import Pattern
 
 from tools.logger import get_logger
 
