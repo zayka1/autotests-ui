@@ -1,5 +1,16 @@
 # Python cache
 __pycache__/
+.venv
 
 # IDEs and editors
-.vscode/
+.vscode
+
+# allure
+allure-results
+allure-report
+
+# testing artifacts
+*.html
+*.json
+videos
+tracing
